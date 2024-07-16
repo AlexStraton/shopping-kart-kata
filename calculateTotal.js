@@ -6,11 +6,13 @@ function calculateTotal(items) {
   let itemsInCart = scanItems(items);
   let total = 0;
   //set total
+
   for (const item in itemsInCart) {
     const quantity = itemsInCart[item];
-    console.log(item, quantity);
+    total = unitPrices[item] * quantity;
   }
-  return 0;
+  console.log(total);
+  return total;
   //destructure unitPrices
   //loop through scanItems
   //access unitprice key using scanItems loop,
