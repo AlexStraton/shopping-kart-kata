@@ -9,7 +9,7 @@ function calculateTotal(items) {
 
   for (const item in itemsInCart) {
     const quantity = itemsInCart[item];
-    total = unitPrices[item] * quantity;
+    total += unitPrices[item] * quantity;
   }
   console.log(total);
   return total;
