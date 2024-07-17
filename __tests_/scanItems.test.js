@@ -16,4 +16,8 @@ describe("scan item", () => {
   test("returns the correct number of items when passed different items", () => {
     expect(scanItems(["A", "C", "B", "B", "A"])).toEqual({ A: 2, B: 2, C: 1 });
   });
+  // test.only("returns correct total if passed an array with an item that doesn't exist", () => {
+  //   expect(calculateTotal(["A", "F", "C"])).toEqual(75);
+  //   expect(calculateTotal(["D", 5, "A"])).toEqual(62);
+  // });
 });

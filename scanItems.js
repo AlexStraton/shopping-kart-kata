@@ -7,8 +7,8 @@ function scanItems(items) {
       itemsInCart[item]++;
     }
   });
+  console.log(itemsInCart);
   return itemsInCart;
 }
-const result = scanItems(["A", "C", "B", "B", "A"]);
 
 module.exports = { scanItems };
