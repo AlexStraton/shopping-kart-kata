@@ -7,7 +7,7 @@ function scanItems(items) {
       itemsInCart[item]++;
     }
   });
-  console.log(itemsInCart);
+
   return itemsInCart;
 }
 

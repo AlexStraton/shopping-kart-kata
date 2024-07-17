@@ -22,9 +22,9 @@ describe("calculate total", () => {
     expect(calculateTotal(["A", "A", "A"])).toEqual(140);
     expect(calculateTotal(["B", "B"])).toEqual(60);
   });
-  test("returns correct total when items on offer are bought together with other items", () => {
+  test.only("returns correct total when items on offer are bought together with other items", () => {
     expect(calculateTotal(["A", "A", "B", "B", "B"])).toEqual(195);
     expect(calculateTotal(["B", "B", "C", "A", "A", "A"])).toEqual(225);
-    // expect(calculateTotal(["A", "A", "A", "A", "A", "A"])).toEqual(280);
+    expect(calculateTotal(["A", "A", "A", "A", "A", "A"])).toEqual(280);
   });
 });
