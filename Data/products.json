@@ -2,31 +2,31 @@
   {
     "A": {
       "unit_price": 50,
-      "special_price": "3 for 140"
+      "special_price": { "amount": 3, "total": 140 }
     }
   },
   {
     "B": {
       "unit_price": 35,
-      "special_price": "2 for 60"
+      "special_price": { "amount": 2, "total": 60 }
     }
   },
   {
     "C": {
       "unit_price": 25,
-      "special_price": ""
+      "special_price": null
     }
   },
   {
     "D": {
       "unit_price": 12,
-      "special_price": ""
+      "special_price": null
     }
   },
   {
     "E": {
-      "unit_price": 66,
-      "special_price": "2 for 100"
+      "unit_price": 60,
+      "special_price": { "amount": 5, "total": 200 }
     }
   }
 ]

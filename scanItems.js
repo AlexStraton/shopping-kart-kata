@@ -11,4 +11,5 @@ function scanItems(items) {
   return itemsInCart;
 }
 
+// console.log(scanItems(items), items);
 module.exports = { scanItems };
