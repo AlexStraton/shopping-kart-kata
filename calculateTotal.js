@@ -1,5 +1,4 @@
 const unitPrices = require("./prices");
-const specialPrices = require("./specialPrice");
 const { scanItems } = require("./scanItems");
 
 function calculateTotal(items) {

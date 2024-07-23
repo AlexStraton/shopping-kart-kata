@@ -1,13 +1,13 @@
 {
   "name": "shopping-cart-kata",
   "version": "1.0.0",
-  "description": "",
+  "description": "SpareRoom interview kata",
   "main": "checkout.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alex",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
