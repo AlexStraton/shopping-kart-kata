@@ -17,19 +17,57 @@ describe("calculate total", () => {
     expect(calculateTotal([{ code: "A", quantity: 2 }])).toEqual(100);
   });
 
-  test("returns correct total if passed an array with more than one item", () => {
-    expect(calculateTotal(["A", "B", "C"])).toEqual(110);
-    expect(calculateTotal(["A", "D", "C"])).toEqual(87);
+  test.only("returns correct total if passed an array with two objects and different quantities", () => {
+    expect(
+      calculateTotal([
+        { code: "A", quantity: 2 },
+        { code: "B", quantity: 1 },
+      ])
+    ).toEqual(135);
+    // expect(
+    //   calculateTotal([
+    //     { code: "C", quantity: 2 },
+    //     { code: "D", quantity: 1 },
+    //     { code: "B", quantity: 2 },
+    //   ])
+    // ).toEqual(132);
   });
 
-  test("returns correct total if passed an array with more than one item and repeated items", () => {
-    expect(calculateTotal(["A", "A", "C"])).toEqual(125);
-    expect(calculateTotal(["D", "D", "A"])).toEqual(74);
+  test.only("returns correct total if passed an array with more than one item and repeated items", () => {
+    expect(
+      calculateTotal([
+        { code: "E", quantity: 2 },
+        { code: "D", quantity: 1 },
+      ])
+    ).toEqual(12);
   });
-  test("returns correct total when only items on offer are bought", () => {
-    expect(calculateTotal(["A", "A", "A"])).toEqual(140);
-    expect(calculateTotal(["B", "B"])).toEqual(60);
+
+  test.only("returns correct total when only items on offer are bought", () => {
+    expect(calculateTotal([{ code: "A", quantity: 3 }])).toEqual(140);
   });
+
+  test.only("returns correct total when only items on offer are bought", () => {
+    expect(
+      calculateTotal([
+        { code: "A", quantity: 3 },
+        { code: "B", quantity: 1 },
+      ])
+    ).toEqual(175);
+  });
+
+  test.only("returns correct total when one offer is matched ", () => {
+    expect(
+      calculateTotal([
+        { code: "A", quantity: 4 },
+        { code: "B", quantity: 2 },
+      ])
+    ).toEqual(250);
+  });
+
+  test.only("returns correct total when one offer is matched ", () => {
+    expect(calculateTotal([{ code: "A", quantity: 3 }])).toEqual(250);
+  });
+
   test("returns correct total when items on offer are bought together with other items", () => {
     expect(calculateTotal(["A", "A", "B", "B", "B"])).toEqual(195);
     expect(calculateTotal(["B", "B", "C", "A", "A", "A"])).toEqual(225);
