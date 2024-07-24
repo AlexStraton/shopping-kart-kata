@@ -1,12 +1,20 @@
 const calculateTotal = require("../calculateTotal");
 
 describe("calculate total", () => {
-  test("returns 0 if passed an empty array", () => {
+  test.only("returns 0 if passed an empty cart", () => {
     expect(calculateTotal([])).toEqual(0);
   });
 
-  test("returns correct total if passed an array with one item", () => {
-    expect(calculateTotal(["A"])).toEqual(50);
+  test.only("returns correct total if passed an array with one item and quantity is 0", () => {
+    expect(calculateTotal([{ code: "A", quantity: 0 }])).toEqual(0);
+  });
+
+  test.only("returns correct total if passed an array with one item and quantity is 1", () => {
+    expect(calculateTotal([{ code: "A", quantity: 1 }])).toEqual(50);
+  });
+
+  test.only("returns correct total if passed an array with one item and quantity is > 1", () => {
+    expect(calculateTotal([{ code: "A", quantity: 2 }])).toEqual(100);
   });
 
   test("returns correct total if passed an array with more than one item", () => {
