@@ -34,5 +34,5 @@ function calculateTotal(cart) {
   return total;
 }
 const totalCost = calculateTotal(cart);
-console.log(totalCost);
+
 module.exports = calculateTotal;
